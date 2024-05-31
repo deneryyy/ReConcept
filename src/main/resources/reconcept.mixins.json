@@ -4,6 +4,9 @@
   "package": "moe.denery.reconcept.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EntityTypeMixin",
+    "FeatureFlagsMixin",
+    "PlayerMixin"
   ],
   "client": [
   ],
