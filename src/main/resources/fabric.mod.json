@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "reconcept",
+  "version": "${version}",
+  "name": "ReConcept",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/deneryyy/ReConcept"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/reconcept/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "moe.denery.reconcept.client.ReConceptClient"
+    ],
+    "main": [
+      "moe.denery.reconcept.ReConcept"
+    ]
+  },
+  "mixins": [
+    "reconcept.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
