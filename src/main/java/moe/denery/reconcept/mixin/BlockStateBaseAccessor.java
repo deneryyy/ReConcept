@@ -2,7 +2,12 @@ package moe.denery.reconcept.mixin;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(BlockBehaviour.BlockStateBase.class)
-public class BlockStateBaseMixin {
+public interface BlockStateBaseAccessor {
+    @Accessor
+    @Mutable
+    void setRequiresCorrectToolForDrops(boolean requiresCorrectToolForDrops);
 }

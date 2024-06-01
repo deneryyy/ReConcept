@@ -4,9 +4,15 @@
   "package": "moe.denery.reconcept.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BiomeGenerationSettingsMixin",
+    "BlockBehaviourAccessor",
+    "BlocksMixin",
+    "BlockStateBaseAccessor",
     "EntityTypeMixin",
     "FeatureFlagsMixin",
-    "PlayerMixin"
+    "MappedRegistryMixin",
+    "PlayerMixin",
+    "RegistryDataLoaderMixin"
   ],
   "client": [
   ],
