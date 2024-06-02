@@ -3,10 +3,11 @@
   "id": "reconcept",
   "version": "${version}",
   "name": "ReConcept",
-  "description": "",
-  "authors": [],
+  "description": "Reconceptualizing Minecraft survival experience.",
+  "authors": ["Denery"],
   "contact": {
-    "repo": "https://github.com/deneryyy/ReConcept"
+    "repo": "https://github.com/deneryyy/ReConcept",
+    "issues": "https://github.com/deneryyy/ReConcept/issues"
   },
   "license": "LGPL-3.0",
   "icon": "assets/reconcept/icon.png",
@@ -26,5 +27,14 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Discord Server": "https://discord.com/invite/MuqxBDM8a7",
+        "Youtube Channel": "https://www.youtube.com/@maestro_denery"
+      },
+      "update_checker": true
+    }
   }
 }

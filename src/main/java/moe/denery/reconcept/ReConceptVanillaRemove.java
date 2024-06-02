@@ -8,7 +8,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 /**
- *
+ *  Contains data of content removed from vanilla minecraft
  */
 public final class ReConceptVanillaRemove {
     public static final ImmutableList<String> VANILLA_TURNED_OFF_ENTITIES = ImmutableList.of(

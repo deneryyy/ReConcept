@@ -1,5 +1,6 @@
 package moe.denery.reconcept.mixin;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import moe.denery.reconcept.ReConcept;
 import moe.denery.reconcept.ReConceptFeatureFlags;
 import net.minecraft.resources.ResourceLocation;
@@ -9,7 +10,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(FeatureFlags.class)
 public class FeatureFlagsMixin {
@@ -18,10 +18,9 @@ public class FeatureFlagsMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/flag/FeatureFlagRegistry$Builder;build()Lnet/minecraft/world/flag/FeatureFlagRegistry;"
-            ),
-            locals = LocalCapture.CAPTURE_FAILHARD
+            )
     )
-    private static void reconceptFeatureFlags(CallbackInfo ci, FeatureFlagRegistry.Builder builder) {
+    private static void reconceptFeatureFlags(CallbackInfo ci, @Local FeatureFlagRegistry.Builder builder) {
         final ResourceLocation vanillaTurnedOff = ReConcept.createReConcept("vanilla_turned_off");
         ReConceptFeatureFlags.setFlags(new ReConceptFeatureFlags(builder.create(vanillaTurnedOff)));
     }
