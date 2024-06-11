@@ -32,7 +32,7 @@ public class BlocksMixin {
 
     @Unique
     private static boolean isWood(String id) {
-        // Too lazy to write each type
+        // In case we can't use block tags
         return id.contains("_planks") || id.contains("_wood") || id.contains("_log");
     }
 }
