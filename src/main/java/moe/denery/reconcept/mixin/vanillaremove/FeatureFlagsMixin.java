@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import moe.denery.reconcept.ReConcept;
@@ -21,7 +21,8 @@ public class FeatureFlagsMixin {
             )
     )
     private static void reconceptFeatureFlags(CallbackInfo ci, @Local FeatureFlagRegistry.Builder builder) {
-        final ResourceLocation vanillaTurnedOff = ReConcept.createReConcept("vanilla_turned_off");
+        // Makes vanilla remove feature flag for easier content removal
+        final ResourceLocation vanillaTurnedOff = ReConcept.createReConcept("vanilla_remove");
         ReConceptFeatureFlags.setFlags(new ReConceptFeatureFlags(builder.create(vanillaTurnedOff)));
     }
 }

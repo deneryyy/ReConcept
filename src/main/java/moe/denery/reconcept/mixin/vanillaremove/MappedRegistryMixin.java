@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import moe.denery.reconcept.ReConceptVanillaRemove;
 import net.minecraft.core.Holder;
@@ -34,6 +34,7 @@ public class MappedRegistryMixin<T> {
             )
     )
     private void vanillaRemoveFreezingFix(CallbackInfoReturnable<Registry<T>> cir) {
+        // deletes keys of removed vanilla content from registries
         if (((ResourceKey<? extends Registry<?>>) this.key) == Registries.CONFIGURED_FEATURE) {
             for (ResourceKey<ConfiguredFeature<?, ?>> removedVanillaConfiguredFeature : ReConceptVanillaRemove.REMOVED_VANILLA_CONFIGURED_FEATURES) {
                 this.byKey.remove(removedVanillaConfiguredFeature);

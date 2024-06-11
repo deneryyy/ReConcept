@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.block.state.BlockBehaviour;

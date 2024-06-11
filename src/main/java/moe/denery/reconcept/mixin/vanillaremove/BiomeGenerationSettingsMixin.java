@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import moe.denery.reconcept.ReConceptVanillaRemove;
 import net.minecraft.core.HolderSet;
@@ -19,13 +19,13 @@ public class BiomeGenerationSettingsMixin {
             argsOnly = true
     )
     private static List<HolderSet<PlacedFeature>> fixPlacedFeatureBiomeReference(List<HolderSet<PlacedFeature>> value) {
-        List<HolderSet<PlacedFeature>> list = value.stream().map(holderSet -> {
+        // removes references for placed features in vanilla biomes
+        return value.stream().map(holderSet -> {
             return (HolderSet<PlacedFeature>) HolderSet.direct(holderSet.stream().filter(featureHolder -> {
                 return featureHolder.unwrapKey()
                         .map(key -> !ReConceptVanillaRemove.REMOVED_VANILLA_PLACED_FEATURES.contains(key))
                         .orElse(false);
             }).toList());
         }).toList();
-        return list;
     }
 }

@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin.client;
+package moe.denery.reconcept.mixin.client.fog;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.client.Camera;
@@ -18,13 +18,15 @@ public class FogRendererMixin {
                     target = "Lcom/mojang/blaze3d/systems/RenderSystem;setShaderFogStart(F)V"
             )
     )
-    private static void changeFog(Camera camera, FogRenderer.FogMode fogMode, float f, boolean bl, float g, CallbackInfo ci, @Local FogRenderer.FogData fogData) {
+    private static void changeFog(Camera camera, FogRenderer.FogMode fogMode, float viewDistance, boolean bl, float g, CallbackInfo ci, @Local FogRenderer.FogData fogData) {
+        // Water fog change
         if (camera.getFluidInCamera() == FogType.WATER) {
             fogData.start = 2.0F;
             fogData.end = 4.5F;
         } else if (camera.getFluidInCamera() == FogType.NONE) {
-            // TODO cooler fog
-            // fogData.end = fogData.end - 220F;
+            fogData.end = viewDistance * 1.2F;
         }
     }
+
+
 }

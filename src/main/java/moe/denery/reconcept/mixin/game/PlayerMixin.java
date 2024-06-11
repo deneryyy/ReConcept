@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.game;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

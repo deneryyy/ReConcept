@@ -1,19 +1,12 @@
-package moe.denery.reconcept.mixin.client;
+package moe.denery.reconcept.mixin.client.water;
 
-import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.client.renderer.LevelRenderer;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ShaderInstance;
-import org.joml.Matrix4f;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LevelRenderer.class)
 public class LevelRendererMixin {
     // water rendering experiment
-
+/*
     @Inject(
             method = "renderSectionLayer",
             at = @At(
@@ -44,4 +37,5 @@ public class LevelRendererMixin {
             shaderInstance.COLOR_MODULATOR.set(colors);
         }
     }
+ */
 }

@@ -1,0 +1,11 @@
+{
+  "item.reconcept.tuft": "Пучок",
+  "item.reconcept.bark": "Кора",
+  "item.reconcept.utility_knife": "Ножичек",
+  "item.reconcept.wooden_material": "Деревянный Материал",
+  "item.reconcept.unlit_torch": "Незажённый Факел",
+  "block.reconcept.jvne_flower": "Цветок Джун",
+  "block.reconcept.agony_flower": "Цветок Агони",
+  "block.reconcept.tuft_block": "Блок Пучков",
+  "itemGroup.reconcept.reconcept_tab": "Реконцепт"
+}

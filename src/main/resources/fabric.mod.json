@@ -13,6 +13,9 @@
   "icon": "assets/reconcept/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "moe.denery.reconcept.data.ReConceptDataGenerator"
+    ],
     "client": [
       "moe.denery.reconcept.client.ReConceptClient"
     ],

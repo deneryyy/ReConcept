@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import com.google.gson.JsonElement;
 import com.mojang.serialization.Decoder;
@@ -25,6 +25,7 @@ public class RegistryDataLoaderMixin {
             cancellable = true
     )
     private static <E> void datapackRegistryElementLoadingHook(WritableRegistry<E> writableRegistry, Decoder<E> decoder, RegistryOps<JsonElement> registryOps, ResourceKey<E> resourceKey, Resource resource, RegistrationInfo registrationInfo, CallbackInfo ci) {
+        // prevents removed datapack vanilla content to be registered in the first place
         if (((ResourceKey<? extends Registry<?>>) writableRegistry.key()) == Registries.CONFIGURED_FEATURE) {
             if (ReConceptVanillaRemove.REMOVED_VANILLA_CONFIGURED_FEATURES.contains(resourceKey)) {
                 ci.cancel();

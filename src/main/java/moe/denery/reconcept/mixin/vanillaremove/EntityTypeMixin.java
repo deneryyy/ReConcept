@@ -1,4 +1,4 @@
-package moe.denery.reconcept.mixin;
+package moe.denery.reconcept.mixin.vanillaremove;
 
 import moe.denery.reconcept.ReConceptFeatureFlags;
 import moe.denery.reconcept.ReConceptVanillaRemove;

@@ -1,5 +1,7 @@
 #version 150
 
+// shader experiment, this doesn't work
+
 vec4 linear_fog(vec4 inColor, float vertexDistance, float fogStart, float fogEnd, vec4 fogColor) {
     if (vertexDistance <= fogStart) {
         return inColor;

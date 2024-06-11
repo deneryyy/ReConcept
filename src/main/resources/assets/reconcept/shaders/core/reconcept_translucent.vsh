@@ -1,5 +1,7 @@
 #version 150
 
+// shader experiment, this doesn't work
+
 #moj_import <light.glsl>
 #moj_import <water_fog.glsl>
 

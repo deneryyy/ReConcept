@@ -16,7 +16,8 @@ public final class ReConceptVanillaRemove {
     );
     public static final ImmutableList<String> VANILLA_TURNED_OFF_BLOCKS = ImmutableList.of(
             "redstone_ore",
-            "deepslate_redstone_ore"
+            "deepslate_redstone_ore",
+            "crafting_table"
     );
     public static final ImmutableList<ResourceKey<ConfiguredFeature<?, ?>>> REMOVED_VANILLA_CONFIGURED_FEATURES = ImmutableList.of(
             OreFeatures.ORE_REDSTONE

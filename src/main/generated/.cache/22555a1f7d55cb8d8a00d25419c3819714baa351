@@ -1,5 +1,15 @@
-// 1.20.6	2024-06-08T18:47:41.070407835	ReConcept/Recipes
+// 1.20.6	2024-06-11T14:43:35.642966454	ReConcept/Recipes
 f8280b7130913e172d1ad4858d03174fcbcf1d12 data/reconcept/advancements/recipes/tools/utility_knife.json
-96df0cba94659b286448ed1330c9e04deee76cfb data/reconcept/recipes/campfire.json
-b92cf2935173c8978657748ee519ccd0b88f30cb data/reconcept/advancements/recipes/building_blocks/campfire.json
+e25f8337b48d1318f20318e44e1cb75e2075a6bf data/reconcept/advancements/recipes/building_blocks/string.json
+35d9c3be6174b56f79dfe7342c0fdaad3e8975df data/reconcept/advancements/recipes/misc/unlit_torch.json
+e9fe71b2916677f1e2e961f880a4c9d3074f0529 data/reconcept/recipes/tuft.json
+ba94359b82101204ac952057e613ddc9332c6006 data/reconcept/advancements/recipes/building_blocks/tuft_block.json
+6720d6d4e6a488c8c0e1f3b9b6e785a89010c3d0 data/reconcept/recipes/unlit_torch.json
+d1d5a29edfa53f9330c66c01a40858c36be16501 data/reconcept/recipes/tuft_block.json
 0e1748dd47a6b5af62e04111989ac053386312ac data/reconcept/recipes/utility_knife.json
+379e73490db513fdd279f7b9814cf1c8fa561181 data/reconcept/recipes/wooden_material.json
+4a1264869f1b51b1ae5df5ed21739983cbbdd257 data/reconcept/advancements/recipes/decorations/agony_flower.json
+3873c8710752e30587e4b210b70914e9b6c356c2 data/reconcept/recipes/string.json
+b470062310350bcd8b8d9379b5cf9514d6b58813 data/reconcept/advancements/recipes/misc/tuft.json
+191026a4d1b0eb6230b68c8c4a03429cf5589742 data/reconcept/recipes/agony_flower.json
+47941405c79d793ba5326861dbd3d5817a940b3f data/reconcept/advancements/recipes/misc/wooden_material.json

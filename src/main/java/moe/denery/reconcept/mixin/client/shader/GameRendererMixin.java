@@ -1,11 +1,8 @@
-package moe.denery.reconcept.mixin.client;
+package moe.denery.reconcept.mixin.client.shader;
 
-import moe.denery.reconcept.client.ReConceptShaders;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.renderer.ShaderInstance;
 import net.minecraft.server.packs.resources.ResourceProvider;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -13,8 +10,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
 
-    @Shadow private static ShaderInstance rendertypeTranslucentShader;
+    // @Shadow private static ShaderInstance rendertypeTranslucentShader;
 
+    /**
+     * For Future. Shader use generally breaks compatibility with sodium.
+     */
     @Inject(
             method = "reloadShaders",
             at = @At(
@@ -24,12 +24,12 @@ public class GameRendererMixin {
             )
     )
     private void vanillaShaderReplacement(ResourceProvider resourceProvider, CallbackInfo ci) {
-        // Doing it this way for more flexibility while development
         // rendertypeTranslucentShader = ReConceptShaders.reconceptTranslucentShader();
     }
 
 /*
-    // The more
+    // The more red way of darkening nights
+
     @Shadow private float darkenWorldAmount;
 
     @Shadow private float darkenWorldAmountO;
@@ -48,6 +48,4 @@ public class GameRendererMixin {
         }
     }
  */
-
-
 }
