@@ -4,27 +4,13 @@
   "package": "moe.denery.reconcept.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "client.dynamiclight.PlayerMixin",
+    "game.BlockMixin",
     "game.ComposterBlockMixin",
     "game.DiggerItemMixin",
     "game.ItemMixin",
     "game.ItemPropertiesMixin",
-    "game.PlayerMixin",
-    "vanillaremove.BiomeGenerationSettingsMixin",
-    "vanillaremove.BlockBehaviourAccessor",
-    "vanillaremove.BlocksMixin",
-    "vanillaremove.BlockStateBaseAccessor",
-    "vanillaremove.EntityTypeMixin",
-    "vanillaremove.FeatureFlagsMixin",
-    "vanillaremove.MappedRegistryMixin",
-    "vanillaremove.RegistryDataLoaderMixin"
-  ],
-  "client": [
-    "client.darkernight.LightTextureMixin",
-    "client.dynamiclight.LevelRendererMixin",
-    "client.fog.FogRendererMixin",
-    "client.shader.GameRendererMixin",
-    "client.water.LevelRendererMixin"
+    "game.ItemsMixin",
+    "game.PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

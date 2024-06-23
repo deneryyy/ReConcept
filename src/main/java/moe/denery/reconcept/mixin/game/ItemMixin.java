@@ -17,7 +17,7 @@ public class ItemMixin {
             cancellable = true
     )
     private void leavesException(ItemStack itemStack, BlockState blockState, CallbackInfoReturnable<Boolean> cir) {
-        // Makes leave blocks drop sticks no matter what instrument is used
+        // Makes leave blocks drop sticks and other stuff no matter what instrument is used
         if (blockState.getBlock() instanceof LeavesBlock) {
             cir.setReturnValue(true);
         }

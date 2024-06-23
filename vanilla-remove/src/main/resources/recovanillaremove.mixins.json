@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "moe.denery.reconcept.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "vanillaremove.BiomeGenerationSettingsMixin",
+    "vanillaremove.BlockBehaviourAccessor",
+    "vanillaremove.BlocksMixin",
+    "vanillaremove.BlockStateBaseAccessor",
+    "vanillaremove.EntityTypeMixin",
+    "vanillaremove.FeatureFlagsMixin",
+    "vanillaremove.ItemAccessor",
+    "vanillaremove.ItemsMixin",
+    "vanillaremove.MappedRegistryMixin",
+    "vanillaremove.RegistryDataLoaderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

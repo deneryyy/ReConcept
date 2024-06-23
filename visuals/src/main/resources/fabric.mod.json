@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "recovisuals",
+  "version": "${version}",
+  "name": "ReCoDynLights",
+  "description": "An utility mod making visual changes of vanilla minecraft",
+  "authors": ["Denery"],
+  "contact": {
+    "repo": "https://github.com/deneryyy/ReConcept",
+    "issues": "https://github.com/deneryyy/ReConcept/issues"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "moe.denery.recovisuals.ReCoVisuals"
+    ]
+  },
+  "mixins": [
+    "recovisuals.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "sodium": "0.5.9+mc1.20.6"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Original Mod": "https://github.com/LambdAurora/LambDynamicLights/"
+      },
+      "update_checker": true
+    }
+  }
+}

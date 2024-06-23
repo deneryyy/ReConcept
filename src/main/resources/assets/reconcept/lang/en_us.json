@@ -3,9 +3,17 @@
   "item.reconcept.bark": "Bark",
   "item.reconcept.utility_knife": "Utility Knife",
   "item.reconcept.wooden_material": "Wooden Material",
+  "item.reconcept.cactus_on_a_stick": "Cactus On A Stick",
   "item.reconcept.unlit_torch": "Unlit Torch",
+  "item.reconcept.stone": "Stone",
   "itemGroup.reconcept.reconcept_tab": "ReConcept",
   "block.reconcept.jvne_flower": "June Flower",
   "block.reconcept.agony_flower": "Agony Flower",
-  "block.reconcept.tuft_block": "Tuft Block"
+  "block.reconcept.tuft_block": "Tuft Block",
+  "block.reconcept.higanbana": "Higanbana",
+  "block.reconcept.ofuda_of_resurrection": "Ofuda Of Resurrection",
+  "block.reconcept.construction_table": "Construction Table",
+  "block.reconcept.polishing_table": "Polishing Table",
+  "entity.reconcept.thrown_item": "Thrown Item",
+  "reconcept.deathScreen.title": "Death Screen"
 }

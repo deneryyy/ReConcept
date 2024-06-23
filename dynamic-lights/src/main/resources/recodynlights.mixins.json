@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.lambdaurora.lambdynlights.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "moe.denery.recodynlights.ReCoDynLightsMixinPlugin",
+  "client": [
+    "ClientLevelMixin",
+    "EntityMixin",
+    "EntityRendererMixin",
+    "LevelRendererInvoker",
+    "LevelRendererMixin",
+    "MinecraftMixin",
+    "PlayerMixin",
+    "fabric.AoCalculatorMixin",
+    "sodium.ArrayLightDataCacheMixin",
+    "sodium.FlatLightPipelineMixin",
+    "sodium.LightDataAccessMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

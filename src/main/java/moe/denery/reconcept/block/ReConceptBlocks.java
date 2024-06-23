@@ -1,13 +1,11 @@
 package moe.denery.reconcept.block;
 
 import moe.denery.reconcept.ReConcept;
+import moe.denery.reconcept.block.ofuda.OfudaOfResurrectionBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -35,6 +33,33 @@ public final class ReConceptBlocks {
             .sound(SoundType.GRASS)
             .offsetType(BlockBehaviour.OffsetType.XZ)
             .pushReaction(PushReaction.DESTROY)));
+
+    public static final Block HIGANBANA = register("higanbana", new FlowerBlock(MobEffects.UNLUCK, 0.35F, BlockBehaviour.Properties.of()
+            .mapColor(MapColor.PLANT)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.GRASS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)));
+
+    public static final Block OFUDA_OF_RESURRECTION = register("ofuda_of_resurrection", new OfudaOfResurrectionBlock(BlockBehaviour.Properties.of()
+            .noCollission()
+            .sound(SoundType.GRASS)
+            .ignitedByLava()
+            .pushReaction(PushReaction.DESTROY)
+            .instabreak()));
+
+    public static final Block CONSTRUCTION_TABLE = register("construction_table", new SlabBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.WOOD)
+            .strength(2.0f, 3.0f)
+            .sound(SoundType.WOOD)
+            .ignitedByLava()));
+
+    public static final Block POLISHING_TABLE = register("polishing_table", new SlabBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.WOOD)
+            .strength(2.0f, 3.0f)
+            .sound(SoundType.WOOD)
+            .ignitedByLava()));
 
     public static void registerBlocks() {}
 

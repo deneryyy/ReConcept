@@ -1,10 +1,14 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.6-SNAPSHOT' apply false
     id 'maven-publish'
 }
 
 version = project.mod_version
 group = project.maven_group
+
+allprojects {
+    apply plugin: "fabric-loom"
+}
 
 base {
     archivesName = project.archives_base_name
@@ -17,6 +21,26 @@ repositories {
     }
 }
 
+// Makes subprojects shade in the main jar and be as api dependencies.
+dependencies {
+    afterEvaluate {
+        subprojects.each {
+            api project(path: "${it.path}", configuration: "namedElements")
+            implementation project("${it.path}:").sourceSets.main.output
+        }
+    }
+}
+
+remapJar {
+    afterEvaluate {
+        subprojects.each {
+            // Include the signed or none signed jar from the sub project.
+            nestedJars.from project("${it.path}").tasks.getByName("remapJar")
+        }
+    }
+}
+
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -27,10 +51,6 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     // Mod menu
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
-}
-
-loom {
-    accessWidenerPath = file("src/main/resources/reconcept.accesswidener")
 }
 
 fabricApi {

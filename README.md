@@ -7,3 +7,6 @@ Main philosophies of this mod:
 2. No global player ranks or any visible characteristics defining game progress which affect the game.
 3. Reuse vanilla content for the sake of building new progression when possible. New content allowed too.
 4. Eliminate any possibilities to create automated farms or any other kind of mechanism automating game progress for the player.
+
+## Credits
+- LambdAurora for the code from the LambDynamicLights mod

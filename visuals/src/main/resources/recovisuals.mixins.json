@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "moe.denery.recovisuals.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "ClientPacketListenerMixin",
+    "FogRendererMixin",
+    "GameRendererMixin",
+    "LevelRendererMixin",
+    "LightTextureMixin",
+    "LocalPlayerMixin",
+    "MinecraftMixin"
+  ]
+}

@@ -7,3 +7,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+include(":vanilla-remove")
+include(":visuals")
+include(":dynamic-lights")

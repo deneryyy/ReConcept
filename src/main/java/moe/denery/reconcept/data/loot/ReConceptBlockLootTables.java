@@ -33,6 +33,10 @@ public class ReConceptBlockLootTables extends FabricBlockLootTableProvider {
         this.dropSelf(ReConceptBlocks.JVNE_FLOWER);
         this.dropSelf(ReConceptBlocks.AGONY_FLOWER);
         this.dropSelf(ReConceptBlocks.TUFT_BLOCK);
+        this.dropSelf(ReConceptBlocks.HIGANBANA);
+        this.dropSelf(ReConceptBlocks.OFUDA_OF_RESURRECTION);
+        this.dropSelf(ReConceptBlocks.CONSTRUCTION_TABLE);
+        this.dropSelf(ReConceptBlocks.POLISHING_TABLE);
 
         // Makes tuft drop
         add(Blocks.SHORT_GRASS, this::createReConceptGrassDrops);

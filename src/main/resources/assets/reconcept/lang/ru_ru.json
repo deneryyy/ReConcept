@@ -3,9 +3,17 @@
   "item.reconcept.bark": "Кора",
   "item.reconcept.utility_knife": "Ножичек",
   "item.reconcept.wooden_material": "Деревянный Материал",
+  "item.reconcept.cactus_on_a_stick": "Кактус На Палочке",
   "item.reconcept.unlit_torch": "Незажённый Факел",
+  "item.reconcept.stone": "Камень",
   "block.reconcept.jvne_flower": "Цветок Джун",
   "block.reconcept.agony_flower": "Цветок Агони",
   "block.reconcept.tuft_block": "Блок Пучков",
-  "itemGroup.reconcept.reconcept_tab": "Реконцепт"
+  "block.reconcept.higanbana": "Хиганбана",
+  "block.reconcept.ofuda_of_resurrection": "Офуда Воскорешения",
+  "block.reconcept.construction_table": "Стол Сблоки",
+  "block.reconcept.polishing_table": "Стол Полировки",
+  "itemGroup.reconcept.reconcept_tab": "Реконцепт",
+  "entity.reconcept.thrown_item": "Кинутый предмет",
+  "reconcept.deathScreen.title": "Экран смерти"
 }

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "recovanillaremove",
+  "version": "${version}",
+  "name": "ReCoVanillaRemove",
+  "description": "An utility mod removing minecraft's vanilla content for the sake of reconcept",
+  "authors": ["Denery"],
+  "contact": {
+    "repo": "https://github.com/deneryyy/ReConcept",
+    "issues": "https://github.com/deneryyy/ReConcept/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "moe.denery.reconcept.ReConceptVanillaRemove"
+    ]
+  },
+  "mixins": [
+    "recovanillaremove.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "sodium": "0.5.9+mc1.20.6"
+  }
+}

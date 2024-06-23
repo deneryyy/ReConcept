@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "recodynlights",
+  "version": "${version}",
+  "name": "ReCoDynLights",
+  "description": "An utility mod providing dynamic light engine for ReConcept's use. Based on LambDynamicLights by LambdAurora",
+  "authors": ["Denery", "LambdAurora"],
+  "contact": {
+    "repo": "https://github.com/deneryyy/ReConcept",
+    "issues": "https://github.com/deneryyy/ReConcept/issues"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "moe.denery.recodynlights.ReCoDynLights"
+    ]
+  },
+  "mixins": [
+    "recodynlights.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "sodium": "0.5.9+mc1.20.6"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Original Mod": "https://github.com/LambdAurora/LambDynamicLights/"
+      },
+      "update_checker": true
+    }
+  }
+}
