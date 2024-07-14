@@ -1,3 +1,12 @@
+/*
+ * Copyright © 2020 LambdAurora <email@lambdaurora.dev>
+ *
+ * This file is part of LambDynamicLights.
+ *
+ * Licensed under the MIT license. For more information,
+ * see the LICENSE file.
+ */
+
 package moe.denery.recodynlights;
 
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap;
@@ -16,10 +25,23 @@ public class ReCoDynLightsMixinPlugin implements IMixinConfigPlugin {
     private final Object2BooleanMap<String> conditionalMixins = new Object2BooleanOpenHashMap<>();
 
     public ReCoDynLightsMixinPlugin() {
+        boolean sodium05XInstalled = ReCoDynLightsMixinPlugin.isSodium05XInstalled();
         // For now sodium mixins are dynamic
-        // this.conditionalMixins.put("dev.lambdaurora.lambdynlights.mixin.sodium.LightDataAccessMixin", sodium05XInstalled);
+        this.conditionalMixins.put("dev.lambdaurora.lambdynlights.mixin.sodium.ArrayLightDataCacheMixin", sodium05XInstalled);
+        this.conditionalMixins.put("dev.lambdaurora.lambdynlights.mixin.sodium.FlatLightPipelineMixin", sodium05XInstalled);
+        this.conditionalMixins.put("dev.lambdaurora.lambdynlights.mixin.sodium.LightDataAccessMixin", sodium05XInstalled);
 
         // TODO support lambdynlights
+    }
+
+    public static boolean isSodium05XInstalled() {
+        return FabricLoader.getInstance().getModContainer("sodium").map(mod -> {
+            try {
+                return mod.getMetadata().getVersion().compareTo(Version.parse("0.5.0")) >= 0;
+            } catch (VersionParsingException e) {
+                throw new RuntimeException(e);
+            }
+        }).orElse(false);
     }
 
     @Override

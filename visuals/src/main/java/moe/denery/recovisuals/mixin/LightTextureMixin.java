@@ -1,5 +1,6 @@
 package moe.denery.recovisuals.mixin;
 
+import moe.denery.recovisuals.ReCoVisuals;
 import moe.denery.recovisuals.registry.DarkeningConditionRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -25,11 +26,10 @@ public class LightTextureMixin {
     @Unique private float darkeningAmount;
     @Unique private float dayCycleValue;
 
-
     @Inject(method = "<init>", at = @At("TAIL"))
     private void registerConditions(GameRenderer gameRenderer, Minecraft minecraft, CallbackInfo ci) {
         DarkeningConditionRegistry registry = DarkeningConditionRegistry.get();
-        registry.registerCondition(DarkeningConditionRegistry.DarkeningCondition.of(() -> this.dayCycleValue <= -0.05F, 0.25F, 0.0025F));
+        registry.registerCondition(DarkeningConditionRegistry.DarkeningCondition.of(() -> this.dayCycleValue <= ReCoVisuals.NIGHT_DARKENING_START, 0.25F, 0.0015F));
         registry.registerCondition(DarkeningConditionRegistry.DarkeningCondition.of(() -> {
             ClientLevel level = minecraft.level;
             if (level == null) return false;

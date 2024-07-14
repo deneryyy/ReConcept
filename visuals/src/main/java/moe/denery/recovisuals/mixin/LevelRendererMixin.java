@@ -2,6 +2,8 @@ package moe.denery.recovisuals.mixin;
 
 import net.minecraft.client.renderer.LevelRenderer;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 
 @Mixin(LevelRenderer.class)
 public class LevelRendererMixin {
@@ -38,4 +40,10 @@ public class LevelRendererMixin {
         }
     }
  */
+    /*
+    @Inject(
+            method = "renderLevel",
+            at = @At(value = "INVOKE", target = "")
+    )
+     */
 }

@@ -11,7 +11,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 public final class ReConceptBlocks {
-    public static final Block TUFT_BLOCK = register("tuft_block", new RotatedPillarBlock(BlockBehaviour.Properties.of()
+    public static final Block TUFT_BLOCK = register("tuft_of_grass_block", new RotatedPillarBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.PLANT)
             .ignitedByLava()
             .instabreak()

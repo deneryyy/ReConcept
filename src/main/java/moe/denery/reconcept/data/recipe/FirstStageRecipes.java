@@ -103,6 +103,15 @@ public final class FirstStageRecipes {
                 .unlockedBy("has_wooden_material", FabricRecipeProvider.has(ReConceptItems.WOODEN_MATERIAL))
                 .unlockedBy("has_brick", FabricRecipeProvider.has(Items.BRICK))
                 .save(exporter);
+
+        FirstStageRecipes.temporary(exporter);
+    }
+
+    private static void temporary(RecipeOutput recipeOutput) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.OAK_PLANKS)
+                .requires(ReConceptItems.WOODEN_MATERIAL)
+                .unlockedBy("has_wooden_material", FabricRecipeProvider.has(ReConceptItems.WOODEN_MATERIAL))
+                .save(recipeOutput);
     }
 
     public static void generateFirstStageVanillaOverrideRecipes(RecipeOutput exporter) {

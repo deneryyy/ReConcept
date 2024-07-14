@@ -13,14 +13,18 @@ import dev.lambdaurora.lambdynlights.util.SodiumDynamicLightHandler;
 import me.jellysquid.mods.sodium.client.model.light.flat.FlatLightPipeline;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import org.spongepowered.asm.mixin.Dynamic;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
+@Pseudo
 @Mixin(value = FlatLightPipeline.class, remap = false)
 public abstract class FlatLightPipelineMixin {
+	@Dynamic
 	@Inject(
 			method = "getOffsetLightmap",
 			at = @At(value = "RETURN", ordinal = 1),

@@ -26,13 +26,13 @@ public final class ReConceptItems {
     private static final List<Item> RECONCEPT_ITEMS = new ArrayList<>();
 
     // resource items
-    public static final Item TUFT = register("tuft", new Item(new Item.Properties()));
+    public static final Item TUFT = register("tuft_of_grass", new Item(new Item.Properties()));
     public static final Item BARK = register("bark", new Item(new Item.Properties()));
     public static final Item WOODEN_MATERIAL = register("wooden_material", new Item(new Item.Properties()));
     public static final Item STONE = register("stone", new Item(new Item.Properties()));
 
     // instruments or usable items
-    public static final Item UTILITY_KNIFE = register("utility_knife", new UtilityKnifeItem(new Item.Properties()
+    public static final Item UTILITY_KNIFE = register("flint_knife", new UtilityKnifeItem(new Item.Properties()
                 .attributes(ItemAttributeModifiers.builder()
                         .add(Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", 2, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
                         .add(Attributes.ATTACK_SPEED, new AttributeModifier(Item.BASE_ATTACK_SPEED_UUID, "Utility knife modifier", -0.7f, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)

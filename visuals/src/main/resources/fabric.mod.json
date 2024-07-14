@@ -2,35 +2,37 @@
   "schemaVersion": 1,
   "id": "recovisuals",
   "version": "${version}",
-  "name": "ReCoDynLights",
+  "name": "ReCoVisuals",
   "description": "An utility mod making visual changes of vanilla minecraft",
   "authors": ["Denery"],
   "contact": {
     "repo": "https://github.com/deneryyy/ReConcept",
     "issues": "https://github.com/deneryyy/ReConcept/issues"
   },
-  "license": "MIT",
+  "license": "LGPL-3.0",
   "environment": "client",
   "entrypoints": {
     "client": [
       "moe.denery.recovisuals.ReCoVisuals"
     ]
   },
+  "icon": "assets/reconcept/icon.png",
   "mixins": [
     "recovisuals.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}",
-    "sodium": "0.5.9+mc1.20.6"
+    "minecraft": "${minecraft_version}"
   },
   "custom": {
     "modmenu": {
-      "links": {
-        "Original Mod": "https://github.com/LambdAurora/LambDynamicLights/"
-      },
-      "update_checker": true
+      "parent": {
+        "id": "reconcept",
+        "name": "ReConcept",
+        "description": "Reconceptualizing Minecraft survival experience",
+        "icon": "assets/reconcept/icon.png"
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
   "id": "reconcept",
   "version": "${version}",
   "name": "ReConcept",
-  "description": "Reconceptualizing Minecraft survival experience.",
+  "description": "Reconceptualizing Minecraft survival experience",
   "authors": ["Denery"],
   "contact": {
     "repo": "https://github.com/deneryyy/ReConcept",
@@ -29,8 +29,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}",
-    "sodium": "0.5.9+mc1.20.6"
+    "minecraft": "${minecraft_version}"
   },
   "custom": {
     "modmenu": {

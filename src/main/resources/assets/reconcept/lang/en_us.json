@@ -1,7 +1,7 @@
 {
-  "item.reconcept.tuft": "Tuft",
+  "item.reconcept.tuft_of_grass": "Tuft Of Grass",
   "item.reconcept.bark": "Bark",
-  "item.reconcept.utility_knife": "Utility Knife",
+  "item.reconcept.flint_knife": "Flint Knife",
   "item.reconcept.wooden_material": "Wooden Material",
   "item.reconcept.cactus_on_a_stick": "Cactus On A Stick",
   "item.reconcept.unlit_torch": "Unlit Torch",
@@ -9,7 +9,7 @@
   "itemGroup.reconcept.reconcept_tab": "ReConcept",
   "block.reconcept.jvne_flower": "June Flower",
   "block.reconcept.agony_flower": "Agony Flower",
-  "block.reconcept.tuft_block": "Tuft Block",
+  "block.reconcept.tuft_of_grass_block": "Tuft Of Grass Block",
   "block.reconcept.higanbana": "Higanbana",
   "block.reconcept.ofuda_of_resurrection": "Ofuda Of Resurrection",
   "block.reconcept.construction_table": "Construction Table",

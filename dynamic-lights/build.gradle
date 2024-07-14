@@ -36,6 +36,10 @@ dependencies {
     modImplementation "maven.modrinth:sodium:${project.sodium_version}"
 }
 
+jar {
+    from("LICENSE")
+}
+
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
